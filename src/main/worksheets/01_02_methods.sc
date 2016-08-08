@@ -1,6 +1,7 @@
-def respond(input: String) = "Status(text=Hello)"
+def respond(input: String) = s"Status(text=Hello $input)"
 respond("World")
 
+// with a return type
 def respondFullSignature(input: String): String = "Status(text=Hello)"
 respondFullSignature("World")
 
@@ -16,14 +17,14 @@ def doNotReturn(input: String): String = {
 }
 doNotReturn("World")
 
-def respondDoNotForgetEquals(input: String) {
+def respondDoNotForgetEquals(input: String) = {
   val i = 55*2
   "Status(text="+i+")"
 }
 // TODO: What does the following line return???
-// respondDoNotForgetEquals("World")
+respondDoNotForgetEquals("World")
 
 // EXERCISE 01 - 2
 // Change the respond method, so that
-//      respond("World")
+      respond("World")
 // returns "Status(text=Hello World)"

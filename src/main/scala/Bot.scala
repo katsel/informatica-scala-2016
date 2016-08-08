@@ -5,7 +5,7 @@ class ControlFunction {
   // The only door to the EXTERNAL world:
   //
   // Callback function, which is always called, when anything in the world around changes.
-  def respond(input: String): String = "Status(text=Hello)"
+  def respond(input: String): String = "Status(text=Hello World!)"
 }
 
 
