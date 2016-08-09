@@ -39,7 +39,19 @@ val refEqualsOp = 234.toString eq "234"
 // - "Status(text=onGoodbye)" if the input state is 'Goodbye'
 // - else "Status(text=?)"
 // try to solve with: 'split' and toXXX
-def respond(input:String) = "Status(text=XXX)"
+
+def respond(input:String):String = {
+
+  val tokens = input.split('(')
+
+  val res = if (tokens(0) == "nothing") "?"
+    else if (tokens(0) == "React") "onReact"
+    else if (tokens(0) == "Energy") "onGoodBye"
+
+  s"Status(text=$res)"
+}
+
+
 
 respond("nothing") // expected: Status(text=?)
 respond("React(...") // expected: Status(text=onReact)

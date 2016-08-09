@@ -20,9 +20,12 @@ s.dropRight(1)
 //    Find for a) and b) each 2 solutions with 'take', 'takeRight', 'drop' and/or 'dropRight'
 // a)
 "Hello" // =>lo
+"Hello".takeRight(2)
+"Hello".drop(3)
 // b)
 "Hello" // => 'He'
-
+"Hello".take(2)
+"Hello".dropRight(3)
 
 // 2. implement 'respond': It should return
 // - "Status(text=onReact)" if the input state 'React'

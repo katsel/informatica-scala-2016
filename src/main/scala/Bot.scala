@@ -5,7 +5,12 @@ class ControlFunction {
   // The only door to the EXTERNAL world:
   //
   // Callback function, which is always called, when anything in the world around changes.
-  def respond(input: String): String = "Status(text=Hello World!)"
+  val name = "Scala"
+  var counter = 0
+  def respond(input: String): String = {
+    counter += 1
+    s"Status(text=Hello $name$counter)"
+  }
 }
 
 

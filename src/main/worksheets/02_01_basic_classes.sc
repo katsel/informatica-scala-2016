@@ -1,8 +1,11 @@
 class ControlFunction() {
   val name = "Scala"
+  var counter = 0
   def respond(input: String): String = {
-    s"Status(text=Hello $name)"
+    counter += 1
+    s"Status(text=Hello $name$counter)"
   }
+  override def toString(): String = s"{name:'$name', counter:$counter}"
 }
 
 val controlFunction = new ControlFunction()
