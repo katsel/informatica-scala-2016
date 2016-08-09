@@ -22,9 +22,18 @@ s.take(4)
 s.drop(4)
 
 // be:
-val result = (left, right)
+val result: (String, String) = (left, right)
 
 // a) What is the type of 'result'? (let Idea Help You: ALT+ENTER)
 // b) retrieve 'result' as one-liner with help of 'splitAt'
 //    see http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.StringOps
+
+val result2 = s.splitAt(4)
+
 // c) "hello" -> "ohell" (via tuples)
+
+val (left2, right2) = result2
+right2 + left2
+
+// another solution
+result2._2 + result2._1
