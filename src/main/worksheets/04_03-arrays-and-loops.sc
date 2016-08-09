@@ -38,3 +38,18 @@ var i = 0
 // Hint:
 // This solution is quite similar to that one in the for-expression: for (i<-0 until params.length)
 // val paramMap: Map[String, String] = keyValueTuples.toMap
+
+// ---------------- EXERCISE 04 - 3
+val ints = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+// a) multiply all ints with 2, filter all multiples of 5, multiply with 7 using `map`
+
+ints
+  .map(i => i*2)
+  .filter(i => i%5==0)
+  .map(i => i*7)
+  .toList
+ints
+  .map(_ * 2)
+  .filter(_ %5 == 0)
+  .map(_ * 7)
+  .toList

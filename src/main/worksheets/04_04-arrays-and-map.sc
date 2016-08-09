@@ -14,6 +14,7 @@ keyValueArrays1.foreach(aa => println(aa.toList))
 val keyValueTuples1: Array[(String, String)] = keyValueArrays1.map(a => (a(0), a(1)))
 keyValueTuples1.toList // make it visible
 val paramMap1: Map[String, String] = keyValueTuples1.toMap
+paramMap1("energy")
 
 // ... all in one with placeholder
 val paramMap1b = params.map(_.split('=')).map(a => (a(0), a(1))).toMap
