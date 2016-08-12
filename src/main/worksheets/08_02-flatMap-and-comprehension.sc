@@ -11,18 +11,18 @@ l3.map(t3 => (0,0,t3))
 
 
 // TODO derive
-//l2.map(t2 => l3.map(t3 => (0,t2,t3)))
-//l2.flatMap(t2 => l3.map(t3 => (0,t2,t3)))
+l2.map(t2 => l3.map(t3 => (0,t2,t3)))
+l2.flatMap(t2 => l3.map(t3 => (0,t2,t3)))
 //
 //l1.map(t1 => l2.flatMap(t2 => l3.map(t3 => (t1,t2,t3))))
 //l1.flatMap(t1 => l2.flatMap(t2 => l3.map(t3 => (t1,t2,t3))))
-//
+// Monad
 //l1.flatMap(t1 => l2.flatMap(t2 => l3.flatMap(t3 => List((t1,t2,t3)))))
 
 // b) with for-comprehension
-//for {t1 <- l1
-//     t2 <- l2
-//     t3 <- l3} yield (t1,t2,t3)
+for {t1 <- l1
+     t2 <- l2
+     t3 <- l3} yield (t1,t2,t3)
 
 // TODO EXERCISE 2
 // find all (x,y)-Tuples for x <- -1 to 1, y <- -1 to 1, where at(x,y)!='W'
